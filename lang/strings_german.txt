@@ -1,0 +1,7 @@
+<?php
+
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'Fügt eine Schaltfläche ein, mit der Nummer, Kurzbeschreibung und Beschreibung in das Clipboard kopiert werden.';
+$s_plugin_CopyDescription_button = 'Beschreibung kopieren';
+$s_plugin_CopyDescription_copied = 'Kopiert!';
+$s_plugin_CopyDescription_failed = 'Kopieren fehlgeschlagen';
