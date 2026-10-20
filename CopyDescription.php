@@ -41,7 +41,7 @@ class CopyDescriptionPlugin extends MantisPlugin {
 
 		$this->author      = 'fulgor';
 		$this->contact     = 'fulgor@posteo.eu';
-		$this->url         = 'https://github.com/fulgor';
+		$this->url         = 'https://github.com/fulgor/mantisbt-copy-description/';
 		$this->page        = '';
 	}
 
