@@ -1,0 +1,7 @@
+<?php
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'Adds a button to the issue view that copies issue number, summary and description to the clipboard.';
+
+$s_plugin_CopyDescription_button = 'Copy description';
+$s_plugin_CopyDescription_copied = 'Copied!';
+$s_plugin_CopyDescription_failed = 'Copy failed';
