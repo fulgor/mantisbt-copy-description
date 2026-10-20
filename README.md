@@ -1,7 +1,6 @@
 # CopyDescription
-![Screenshot shows button](https://github.com/fulgor/mantisbt-copy-description/edit/main/CopyDescription.scr.png)
 
-MantisBT 2.x plugin that adds a button to the *View Issue* page. One click copies
+**MantisBT 2.x plugin** that adds a button to the *View Issue Details* page. One click copies
 the issue number, the summary and the description to the clipboard, as raw text
 exactly as stored in the issue:
 
@@ -14,9 +13,11 @@ Description text
 The button is placed right behind "Jump to History". If that button is not
 available, it is shown in the header of the issue details instead.
 
+![Screenshot shows button](https://github.com/fulgor/mantisbt-copy-description/blob/main/CopyDescription.scr.png)
+
 ## Requirements
 
-- MantisBT 2.0.0 or newer
+- MantisBT 2.x or newer
 
 ## Installation
 
@@ -30,20 +31,6 @@ No configuration is needed.
 - On installations without HTTPS the browser does not offer the modern clipboard
   API. The plugin then falls back to an older method, so the button works there as well.
 - The button label is available in English and German, depending on the user's language setting.
-
----
-
-# CopyDescription (Deutsch)
-
-MantisBT-2.x-Plugin, das auf der Ticketseite einen Button einblendet. Ein Klick
-kopiert Ticketnummer, Zusammenfassung und Beschreibung als Rohtext (genau wie im
-Ticket gespeichert) in die Zwischenablage.
-
-Der Button steht direkt hinter "Zu Historie springen". Ist dieser Button nicht
-vorhanden, erscheint er stattdessen in der Kopfzeile der Ticket-Details.
-
-**Installation:** Ordner `CopyDescription` nach `plugins/` kopieren, dann unter
-*Verwalten → Plugins verwalten* auf **Installieren** klicken.
 
 ## License
 
