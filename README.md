@@ -1,4 +1,5 @@
 # CopyDescription
+![Screenshot shows button](CopyDescription.src.png)
 
 MantisBT 2.x plugin that adds a button to the *View Issue* page. One click copies
 the issue number, the summary and the description to the clipboard, as raw text
