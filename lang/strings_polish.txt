@@ -1,0 +1,8 @@
+<?php
+// PL polish
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'Dodaje przycisk do widoku zgłoszenia, który kopiuje numer zgłoszenia, podsumowanie i opis do schowka.';
+
+$s_plugin_CopyDescription_button = 'Kopiuj opis';
+$s_plugin_CopyDescription_copied = 'Skopiowano!';
+$s_plugin_CopyDescription_failed = 'Kopiowanie nie powiodło się';
