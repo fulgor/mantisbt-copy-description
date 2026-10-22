@@ -1,0 +1,8 @@
+<?php
+// IT italian
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'Aggiunge un pulsante alla schermata dell'issue che copia il numero, il riepilogo e la descrizione dell'issue negli appunti.';
+
+$s_plugin_CopyDescription_button = 'Copia descrizione';
+$s_plugin_CopyDescription_copied = 'Copiato!';
+$s_plugin_CopyDescription_failed = 'Copia non riuscita';
