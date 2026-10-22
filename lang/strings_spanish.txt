@@ -1,0 +1,8 @@
+<?php
+// ES spanish
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'Añade un botón a la vista de incidencias que copia el número, el resumen y la descripción de la incidencia al portapapeles.';
+
+$s_plugin_CopyDescription_button = 'Copiar descripción';
+$s_plugin_CopyDescription_copied = '¡Copiado!';
+$s_plugin_CopyDescription_failed = 'Error al copiar';
