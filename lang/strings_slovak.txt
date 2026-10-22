@@ -1,0 +1,8 @@
+<?php
+// SK slovak
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'Pridá do zobrazenia úlohy tlačidlo, ktoré skopíruje číslo úlohy, súhrn a popis do schránky.';
+
+$s_plugin_CopyDescription_button = 'Kopírovať popis';
+$s_plugin_CopyDescription_copied = 'Kopírovanie úspešné!';
+$s_plugin_CopyDescription_failed = 'Kopírovanie sa nepodarilo';
