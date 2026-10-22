@@ -15,6 +15,9 @@ available, it is shown in the header of the issue details instead.
 
 ![Screenshot shows button](https://github.com/fulgor/mantisbt-copy-description/blob/main/CopyDescription.scr.png)
 
+## Languages
+DE, EN, ES, FR, HU, IT, PL, SK, SL, ZS
+
 ## Requirements
 
 - MantisBT 2.x or newer
