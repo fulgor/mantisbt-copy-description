@@ -1,0 +1,9 @@
+<?php
+// HU hungarian
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'Hoz létre egy gombot a feladatnézetben, amely a feladat számát, összefoglalóját és leírását másolja a vágólapra.';
+
+$s_plugin_CopyDescription_button = 'Leírás másolása';
+$s_plugin_CopyDescription_copied = 'Másolás megtörtént!';
+$s_plugin_CopyDescription_failed = 'A másolás nem sikerült';
+ 
