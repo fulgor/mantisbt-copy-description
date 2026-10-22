@@ -1,0 +1,8 @@
+<?php
+// ZS czech
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'Přidá do zobrazení úkolu tlačítko, které zkopíruje číslo úkolu, shrnutí a popis do schránky.';
+
+$s_plugin_CopyDescription_button = 'Kopírovat popis';
+$s_plugin_CopyDescription_copied = 'Zkopírováno!';
+$s_plugin_CopyDescription_failed = 'Kopírování se nezdařilo';
