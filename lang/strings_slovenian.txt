@@ -1,0 +1,8 @@
+<?php
+// SL slovene  / slovenian
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'V pogledu težave doda gumb, ki številko težave, povzetek in opis kopira v odložišče.';
+
+$s_plugin_CopyDescription_button = 'Kopiraj opis';
+$s_plugin_CopyDescription_copied = 'Kopirano!';
+$s_plugin_CopyDescription_failed = 'Kopiranje ni uspelo';
