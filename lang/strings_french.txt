@@ -1,0 +1,8 @@
+<?php
+// FR french
+$s_plugin_format_title = 'Copy Description';
+$s_plugin_format_description = 'Ajoute un bouton à la vue des tickets qui permet de copier le numéro, le résumé et la description du ticket dans le presse-papiers.';
+
+$s_plugin_CopyDescription_button = 'Copier la description';
+$s_plugin_CopyDescription_copied = 'Copié !';
+$s_plugin_CopyDescription_failed = 'Échec de la copie';
