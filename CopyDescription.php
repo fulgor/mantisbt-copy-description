@@ -33,18 +33,30 @@ class CopyDescriptionPlugin extends MantisPlugin {
 	function register() {
 		$this->name        = lang_get( 'plugin_format_title' );
 		$this->description = lang_get( 'plugin_format_description' );
-
-		$this->version     = '1.0.2';
-		$this->requires = array(
+		$this->version     = '1.1.0';
+		$this->requires    = array(
 			'MantisCore' => '2.0.0',
 		);
-
 		$this->author      = 'fulgor';
 		$this->contact     = 'fulgor@posteo.eu';
 		$this->url         = 'https://github.com/fulgor/mantisbt-copy-description/';
 		$this->page        = '';
 	}
 
+	/**
+	 * Default settings. ON = field is copied, OFF = field is not copied.
+	 *
+	 * @return array
+	 */
+	function config() {
+		return array(
+			'copy_id'                     => ON,
+			'copy_summary'                => ON,
+			'copy_description'            => ON,
+			'copy_steps_to_reproduce'     => OFF,
+			'copy_additional_information' => OFF,
+		);
+	}
 
 	function hooks() {
 		return array(
@@ -64,10 +76,46 @@ class CopyDescriptionPlugin extends MantisPlugin {
 	function view_bug_details( $p_event, $p_bug_id ) {
 		$t_bug = bug_get( (int)$p_bug_id, true );
 
-		# Raw text, exactly as stored: "0001234: Summary" + blank line + description
-		$t_text = bug_format_id( $t_bug->id ) . ': ' . $t_bug->summary
-			. "\n\n"
-			. $t_bug->description;
+		$t_copy_id          = ( plugin_config_get( 'copy_id' ) == ON );
+		$t_copy_summary     = ( plugin_config_get( 'copy_summary' ) == ON );
+		$t_copy_description = ( plugin_config_get( 'copy_description' ) == ON );
+		$t_copy_steps       = ( plugin_config_get( 'copy_steps_to_reproduce' ) == ON );
+		$t_copy_additional  = ( plugin_config_get( 'copy_additional_information' ) == ON );
+
+		# Head line: "0001234: Summary". The colon only appears if both
+		# parts are active.
+		$t_head = array();
+		if( $t_copy_id ) {
+			$t_head[] = bug_format_id( $t_bug->id );
+		}
+		if( $t_copy_summary ) {
+			$t_head[] = $t_bug->summary;
+		}
+
+		# Collect all active parts; they are joined by a blank line below.
+		$t_parts = array( implode( ': ', $t_head ) );
+		if( $t_copy_description ) {
+			$t_parts[] = $t_bug->description;
+		}
+		if( $t_copy_steps ) {
+			$t_parts[] = $t_bug->steps_to_reproduce;
+		}
+		if( $t_copy_additional ) {
+			$t_parts[] = $t_bug->additional_information;
+		}
+
+		# Drop empty parts, so no superfluous blank lines appear.
+		$t_parts = array_filter( $t_parts, function( $p_part ) {
+			return trim( $p_part ) !== '';
+		} );
+
+		# Nothing to copy (all fields off or empty): show no button.
+		if( empty( $t_parts ) ) {
+			return;
+		}
+
+		# Raw text, exactly as stored, parts separated by a blank line.
+		$t_text = implode( "\n\n", $t_parts );
 
 		$t_script = plugin_file( 'copydescription.js' ) . '&v=' . $this->version;
 
