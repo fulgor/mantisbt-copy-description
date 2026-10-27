@@ -27,7 +27,23 @@ DE, EN, ES, FR, HU, IT, PL, SK, SL, ZS
 1. Copy the folder `CopyDescription` into the `plugins/` directory of your MantisBT installation.
 2. In MantisBT open *Manage → Manage Plugins* and click **Install** next to "Copy Description".
 
-No configuration is needed.
+## Settings
+
+Which fields are copied is defined in the method `config()` in `CopyDescription.php`
+(`ON` = copied, `OFF` = not copied):
+
+| Setting                       | Default |
+|-------------------------------|---------|
+| `copy_id`                     | ON      |
+| `copy_summary`                | ON      |
+| `copy_description`            | ON      |
+| `copy_steps_to_reproduce`     | OFF     |
+| `copy_additional_information` | OFF     |
+
+The head line is `0001234: Summary`; the colon only appears if both ID and summary are
+active. All other fields follow, separated by a blank line. Empty fields are skipped.
+If nothing is left to copy, no button is shown.
+
 
 ## Notes
 
